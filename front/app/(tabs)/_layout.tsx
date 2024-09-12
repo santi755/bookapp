@@ -28,9 +28,10 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="explore"
+        name="explore_test"
         options={{
-          title: "Explore",
+            href: null,
+          title: "Explore test",
           tabBarIcon: ({ color, focused }) => (
             <TabBarIcon
               name={focused ? "code-slash" : "code-slash-outline"}
@@ -39,6 +40,18 @@ export default function TabLayout() {
           ),
         }}
       />
+            <Tabs.Screen
+              name="[user]"
+              options={{
+          title: "dynamic route",
+          tabBarIcon: ({ color, focused }) => (
+            <TabBarIcon
+              name={focused ? "code-slash" : "code-slash-outline"}
+              color={color}
+            />
+          ),
+              }}
+            />
     </Tabs>
   );
 }
