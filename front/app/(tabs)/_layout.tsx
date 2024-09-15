@@ -28,30 +28,14 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="explore_test"
+        name="profile"
         options={{
-            href: null,
-          title: "Explore test",
-          tabBarIcon: ({ color, focused }) => (
-            <TabBarIcon
-              name={focused ? "code-slash" : "code-slash-outline"}
-              color={color}
-            />
+          title: "Profile",
+          tabBarIcon: ({ color }) => (
+            <TabBarIcon name={"person-circle-outline"} color={color} />
           ),
         }}
       />
-            <Tabs.Screen
-              name="[user]"
-              options={{
-          title: "dynamic route",
-          tabBarIcon: ({ color, focused }) => (
-            <TabBarIcon
-              name={focused ? "code-slash" : "code-slash-outline"}
-              color={color}
-            />
-          ),
-              }}
-            />
     </Tabs>
   );
 }
