@@ -11,6 +11,7 @@ const i18n = new I18n({
 });
 
 // Set the locale once at the beginning of your app.
-i18n.locale = getLocales()[0].languageCode ?? "es";
+//i18n.locale = getLocales()[0].languageCode ?? "es"; // TODO: Check why this is not working
+i18n.locale = "es";
 
 export default i18n;
