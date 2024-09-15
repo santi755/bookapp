@@ -1,15 +1,14 @@
-import { View, Text } from "react-native";
-import { styled } from "nativewind";
+import { View } from "react-native";
 import { useTranslation } from "react-i18next";
 
-const StyledText = styled(Text);
+import { Paragraph } from "@/components/atoms/text/paragraph";
 
 export default function HomeScreen() {
   const { t } = useTranslation();
 
   return (
     <View>
-      <StyledText className="text-red-600"> {t("welcome")} </StyledText>
+      <Paragraph className="text-red-600"> {t("welcome")} !! </Paragraph>
     </View>
   );
 }

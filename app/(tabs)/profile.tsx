@@ -1,13 +1,12 @@
-import { View, Text } from "react-native";
-import { styled } from "nativewind";
+import { View } from "react-native";
 
-const StyledText = styled(Text);
+import { Paragraph } from "@/components/atoms/text/paragraph";
 
 export default function HomeScreen() {
   return (
     <View>
-      <StyledText className="text-blue-500">profile page...</StyledText>
-      <StyledText className="text-blue-500">Otro texto!...</StyledText>
+      <Paragraph className="text-blue-500">profile page...</Paragraph>
+      <Paragraph className="text-blue-500">Otro text 2o!...</Paragraph>
     </View>
   );
 }
