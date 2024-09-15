@@ -13,7 +13,7 @@ const LocaleContext = createContext<I18nContextType>({
   setLocale: () => {},
 });
 
-const i18nProvider = (props: any) => {
+const I18nProvider = (props: any) => {
   const [locale, setLocale] = useState<string>(i18n.locale);
 
   const localeValue = {
@@ -29,4 +29,4 @@ const i18nProvider = (props: any) => {
   return <LocaleContext.Provider value={localeValue} {...props} />;
 };
 
-export { LocaleContext, i18nProvider };
+export { LocaleContext, I18nProvider };

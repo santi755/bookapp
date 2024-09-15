@@ -1,4 +1,4 @@
-import 'reflect-metadata';
+import "reflect-metadata";
 import {
   DarkTheme,
   DefaultTheme,
@@ -8,7 +8,7 @@ import { useFonts } from "expo-font";
 import { Stack } from "expo-router";
 import * as SplashScreen from "expo-splash-screen";
 import { useEffect } from "react";
-import "react-native-reanimated";
+import { I18nProvider } from "@/plugins/lang/i18nProvider";
 
 import { useColorScheme } from "@/hooks/useColorScheme";
 
