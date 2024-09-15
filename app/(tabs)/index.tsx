@@ -1,12 +1,11 @@
 import { View, Text } from "react-native";
 import { styled } from "nativewind";
-import { useContext } from "react";
-import { LocaleContext } from "@/plugins/lang/i18nProvider";
+import { useTranslation } from "react-i18next";
 
 const StyledText = styled(Text);
 
 export default function HomeScreen() {
-  const { t } = useContext(LocaleContext);
+  const { t } = useTranslation();
 
   return (
     <View>

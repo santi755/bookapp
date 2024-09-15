@@ -1,17 +1,37 @@
-import { getLocales } from "expo-localization";
-import { I18n } from "i18n-js";
+import i18n from "i18next";
+import { initReactI18next } from "react-i18next";
+import * as Localization from "expo-localization";
+import AsyncStorage from "@react-native-async-storage/async-storage";
+import es from "@/plugins/lang/locales/es.json";
+import en from "@/plugins/lang/locales/en.json";
 
-import en from "./locales/en.json";
-import es from "./locales/es.json";
+const resources = {
+  "es-ES": {
+    translation: es,
+  },
+  "en-US": {
+    translation: en,
+  },
+};
 
-// Set the key-value pairs for the different languages you want to support.
-const i18n = new I18n({
-  en,
-  es,
-});
+const initI18n = async () => {
+  let savedLanguage = await AsyncStorage.getItem("language");
 
-// Set the locale once at the beginning of your app.
-//i18n.locale = getLocales()[0].languageCode ?? "es"; // TODO: Check why this is not working
-i18n.locale = "es";
+  if (!savedLanguage) {
+    savedLanguage = Localization.locale;
+  }
+
+  i18n.use(initReactI18next).init({
+    compatibilityJSON: "v3",
+    resources,
+    lng: savedLanguage,
+    fallbackLng: "en-US",
+    interpolation: {
+      escapeValue: false,
+    },
+  });
+};
+
+initI18n();
 
 export default i18n;
