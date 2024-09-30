@@ -9,7 +9,9 @@ import { Stack } from "expo-router";
 import * as SplashScreen from "expo-splash-screen";
 import { useEffect } from "react";
 import "@/plugins/lang/i18n";
-import { SafeAreaProvider } from "react-native-safe-area-context"; // Importar SafeAreaProvider
+import { SafeAreaProvider } from "react-native-safe-area-context";
+import { Provider } from '@/config/ioc/ioc.react';
+import { container } from '@/core/config/inversify.config';
 
 import { useColorScheme } from "@/hooks/useColorScheme";
 
@@ -34,12 +36,14 @@ export default function RootLayout() {
 
   return (
     <SafeAreaProvider>
-      <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
-        <Stack>
-          <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-          <Stack.Screen name="+not-found" />
-        </Stack>
-      </ThemeProvider>
+        <Provider container={container}>
+          <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
+            <Stack>
+              <Stack.Screen name="(tabs)" />
+              <Stack.Screen name="+not-found" />
+            </Stack>
+          </ThemeProvider>
+        </Provider>
     </SafeAreaProvider>
   );
 }

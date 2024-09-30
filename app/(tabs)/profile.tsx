@@ -5,7 +5,7 @@ export default function HomeScreen() {
   return (
     <ViewContainer>
       <Text className="text-blue-500">profile page 2...</Text>
-      <Text className="text-blue-500">Otro text 2ossss!...</Text>
+      <Text className="text-blue-500">Otro text 2 2ossss!...</Text>
     </ViewContainer>
   );
 }
