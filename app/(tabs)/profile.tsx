@@ -1,11 +1,11 @@
 import ViewContainer from "@/components/layout/ViewContainer";
-import { Paragraph } from "@/components/atoms/text/paragraph";
+import { Text } from "@/components/atoms/text/Text";
 
 export default function HomeScreen() {
   return (
     <ViewContainer>
-      <Paragraph className="text-blue-500">profile page 2...</Paragraph>
-      <Paragraph className="text-blue-500">Otro text 2ossss!...</Paragraph>
+      <Text className="text-blue-500">profile page 2...</Text>
+      <Text className="text-blue-500">Otro text 2ossss!...</Text>
     </ViewContainer>
   );
 }
