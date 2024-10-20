@@ -1,7 +1,7 @@
 import { injectable } from "inversify";
 import Constants from "expo-constants";
 
-import { AuthenticateUser } from "@/core/contexts/AuthContext/application/AuthenticateUser";
+import { AuthenticateUser } from "@/core/contexts/auth/application/AuthenticateUser";
 
 @injectable()
 class AuthenticateUserHandler {

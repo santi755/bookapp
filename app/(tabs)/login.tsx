@@ -4,7 +4,7 @@ import { useInjection } from "@/config/ioc/ioc.react";
 import ViewContainer from "@/components/layout/ViewContainer";
 import { Text } from "@/components/atoms/text/Text";
 import { Button } from "react-native";
-import AuthenticateUserHandler from "@/core/contexts/AuthContext/application/AuthenticateUserHandler";
+import AuthenticateUserHandler from "@/core/contexts/auth/application/AuthenticateUserHandler";
 
 export default function HomeScreen() {
   const authenticateUserHandler = useInjection<AuthenticateUserHandler>(
