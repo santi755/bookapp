@@ -1,3 +1,9 @@
-import {Container} from 'inversify';
+import { Container } from "inversify";
 
-export const container = new Container();
+import { registerAuthDependencies } from "@/core/config/dependencies/auth.config";
+
+const container = new Container();
+
+registerAuthDependencies(container);
+
+export default container;

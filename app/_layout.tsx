@@ -10,8 +10,8 @@ import * as SplashScreen from "expo-splash-screen";
 import { useEffect } from "react";
 import "@/plugins/lang/i18n";
 import { SafeAreaProvider } from "react-native-safe-area-context";
-import { Provider } from '@/config/ioc/ioc.react';
-import { container } from '@/core/config/inversify.config';
+import { Provider } from "@/config/ioc/ioc.react";
+import container from "@/core/config/inversify.config";
 
 import { useColorScheme } from "@/hooks/useColorScheme";
 
@@ -36,14 +36,16 @@ export default function RootLayout() {
 
   return (
     <SafeAreaProvider>
-        <Provider container={container}>
-          <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
-            <Stack>
-              <Stack.Screen name="(tabs)" />
-              <Stack.Screen name="+not-found" />
-            </Stack>
-          </ThemeProvider>
-        </Provider>
+      <Provider container={container}>
+        <ThemeProvider
+          value={colorScheme === "dark" ? DarkTheme : DefaultTheme}
+        >
+          <Stack>
+            <Stack.Screen name="(tabs)" />
+            <Stack.Screen name="+not-found" />
+          </Stack>
+        </ThemeProvider>
+      </Provider>
     </SafeAreaProvider>
   );
 }

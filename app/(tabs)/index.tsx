@@ -8,7 +8,7 @@ export default function HomeScreen() {
 
   return (
     <ViewContainer>
-      <Text className="text-green-600"> {t("welcome")} !! </Text>
+      <Text className="text-green-600"> {t("welcome")} ! </Text>
     </ViewContainer>
   );
 }

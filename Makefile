@@ -1,7 +1,6 @@
 NPM=npm
 NPX=npx
 EXPO=expo
-FRONT_DIR=front
 
 # Install dependencies
 install:
