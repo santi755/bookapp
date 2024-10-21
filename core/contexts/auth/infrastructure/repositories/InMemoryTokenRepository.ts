@@ -1,6 +1,6 @@
 import { injectable } from "inversify";
 
-import { TokenRepository } from "@/core/contexts/auth/domain/TokenRepository";
+import TokenRepository from "@/core/contexts/auth/domain/TokenRepository";
 
 @injectable()
 export default class InMemoryTokenRepository implements TokenRepository {
