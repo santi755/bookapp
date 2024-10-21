@@ -14,7 +14,7 @@ class AuthenticateUserHandler {
     const apiUrl = Constants.expoConfig?.extra?.apiUrl;
     console.log("AuthenticateUserHandler.execute => ", { user, apiUrl });
 
-    this.tokenRepository.SetToken("123");
+    this.tokenRepository.setToken("mitoken");
   }
 }
 
