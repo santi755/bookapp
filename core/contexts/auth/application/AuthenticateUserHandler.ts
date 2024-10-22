@@ -1,5 +1,4 @@
 import { inject, injectable } from "inversify";
-import Constants from "expo-constants";
 
 import { AuthenticateUser } from "@/core/contexts/auth/application/AuthenticateUser";
 import { TYPES } from "@/core/config/types";
@@ -11,9 +10,6 @@ class AuthenticateUserHandler {
   private tokenRepository!: TokenRepository;
 
   public async execute(user: AuthenticateUser): Promise<void> {
-    const apiUrl = Constants.expoConfig?.extra?.apiUrl;
-    console.log("AuthenticateUserHandler.execute => ", { user, apiUrl });
-
     this.tokenRepository.setToken("mitoken");
   }
 }
