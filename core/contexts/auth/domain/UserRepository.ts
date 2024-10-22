@@ -1,5 +1,3 @@
-interface UserRepository {
-    LogIn(user: User): Promise<void>;
-    LogOut(): Promise<void>;
-    GetUser(): Promise<User>;
+export default interface UserRepository {
+  LogIn(email: string, password: string): Promise<any>;
 }

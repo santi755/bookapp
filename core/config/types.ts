@@ -1,5 +1,9 @@
 export const TYPES = {
-  AuthenticateUserHandler: Symbol.for("AuthenticateUserHandler"),
   TokenRepository: Symbol.for("TokenRepository"),
+  UserRepository: Symbol.for("UserRepository"),
+
+  AuthenticateUserHandler: Symbol.for("AuthenticateUserHandler"),
   CheckUserLoggedInHandler: Symbol.for("CheckUserLoggedInHandler"),
+
+  HttpConnector: Symbol.for("HttpConnector"),
 };

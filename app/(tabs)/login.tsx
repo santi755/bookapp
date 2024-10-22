@@ -6,6 +6,7 @@ import { Text } from "@/components/atoms/text/Text";
 import { Button } from "react-native";
 import AuthenticateUserHandler from "@/core/contexts/auth/application/AuthenticateUserHandler";
 import CheckUserLoggedInHandler from "@/core/contexts/auth/application/CheckUserLoggedInHandler";
+import { LOGIN_EMAIL, LOGIN_PASSWORD } from "@/core/config/config";
 
 export default function HomeScreen() {
   const authenticateUserHandler = useInjection<AuthenticateUserHandler>(
@@ -18,8 +19,8 @@ export default function HomeScreen() {
 
   function logIn() {
     authenticateUserHandler.execute({
-      email: "email@email.com",
-      password: "123",
+      email: LOGIN_EMAIL || "",
+      password: LOGIN_PASSWORD || "",
     });
   }
 

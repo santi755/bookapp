@@ -30,5 +30,7 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
   },
   extra: {
     apiUrl: process.env.EXPO_PUBLIC_API_URL,
+    loginEmail: process.env.EXPO_LOGIN_EMAIL,
+    loginPassword: process.env.EXPO_LOGIN_PASSWORD,
   },
 });
