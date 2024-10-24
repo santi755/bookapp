@@ -10,5 +10,8 @@ install:
 start:
 	$(NPX) $(EXPO) start
 
+tunnel:
+	ssh -R 80:localhost:8080 nokey@localhost.run
 
-.PHONY: install start
+
+.PHONY: install start tunnel

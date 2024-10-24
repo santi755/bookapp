@@ -15,7 +15,7 @@ class AuthenticateUserHandler {
 
   public async execute(user: AuthenticateUser): Promise<void> {
     const token = await this.userRepository.LogIn(user.email, user.password);
-    this.tokenRepository.setToken(token.token);
+    this.tokenRepository.setToken(token);
   }
 }
 
